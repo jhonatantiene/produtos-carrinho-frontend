@@ -1,0 +1,13 @@
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    background: #07404A;
+    gap: 200px;
+
+    button {
+        color: white;
+        font-size: large;
+        text-align: center;
+        font-family: sans-serif;
+    }
+}

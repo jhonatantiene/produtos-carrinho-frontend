@@ -1,1 +1,8 @@
-<p>lista-produtos works!</p>
+<mat-toolbar class="cabecalho">
+    <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
+    <mat-menu #cadastro="matMenu">
+        <button mat-menu-item style="text-align: center; color: #07404A;">Novo produto</button>
+    </mat-menu>
+    <button mat-button><mat-icon>shopping_cart</mat-icon>Meu carrinho</button>
+
+</mat-toolbar>
