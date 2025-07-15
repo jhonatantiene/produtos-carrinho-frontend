@@ -1,1 +1,27 @@
-<p>cadastro-produtos works!</p>
+<div class="container-cadastro">
+    <div class="formulario-cadastro">
+        <h2>Novo Produto</h2>
+
+        <form [formGroup]="formulario">
+            <input type="text" formControlName="nome" placeholder="Nome do Produto*" />
+
+            <textarea formControlName="descricao" rows="3" placeholder="Descrição*"></textarea>
+
+            <div class="grupo-linha">
+                <input type="number" formControlName="preco" placeholder="Preço*" />
+                <input type="number" formControlName="quantidade" placeholder="Quantidade*" />
+            </div>
+
+            <div class="upload-imagem">
+                <label for="imagem">Imagem do Produto:</label>
+                <input type="file" id="imagem" (change)="selecionarImagem($event)" />
+            </div>
+
+            <div class="botoes">
+                <button mat-stroked-button style="color: #07404A;">Cancelar</button>
+                <button mat-flat-button [disabled]="formulario.invalid"
+                    [ngClass]="{'botaoSalvarDesabilitado': formulario.invalid, 'botaoSalvarHabilitado': formulario.valid }">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
