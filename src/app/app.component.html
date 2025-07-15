@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<router-outlet>
+    <!-- cabecalho -->
+    <mat-toolbar class="cabecalho">
+        <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
+        <mat-menu #cadastro="matMenu">
+            <button mat-menu-item>Novo produto</button>
+        </mat-menu>
+        <button mat-button><mat-icon>shopping_cart</mat-icon>Meu carrinho</button>
+    </mat-toolbar>
+</router-outlet>

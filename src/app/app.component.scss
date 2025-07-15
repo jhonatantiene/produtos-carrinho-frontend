@@ -1,0 +1,23 @@
+/*cabeçalho fixo com os botoes*/
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #07404A;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    z-index: 1000;
+    align-items: center;
+
+    button {
+        color: white;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+
+    @media (max-width: 600px) {
+        gap: 40px;
+        justify-content: space-around;
+    }
+}
