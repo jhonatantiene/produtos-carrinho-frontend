@@ -1,1 +1,66 @@
-<p>carrinho works!</p>
+<div class="container">
+    <ng-container *ngIf="itens.length > 0; else carrinhoVazio">
+
+        <!-- produtos -->
+        <div class="container-produtos">
+            @for (item of itens; track $index) {
+            <div class="produto-card">
+                <img [src]="item.imagem" />
+                <div class="info">
+                    <h3>{{ item.nome }}</h3>
+                    <p>Preço unitário: R$ {{ item.preco }}</p>
+                    <p>Subtotal: R$ xxxxxx</p>
+
+                    <div class="quantidade">
+                        <button mat-icon-button>
+                            <mat-icon>remove</mat-icon>
+                        </button>
+
+                        <input value="1" />
+
+                        <button mat-icon-button>
+                            <mat-icon>add</mat-icon>
+                        </button>
+                    </div>
+
+                    <button mat-button color="warn" (click)="removerItem($index)">Excluir</button>
+
+                    <div class="frete">Frete: Grátis</div>
+                </div>
+            </div>
+            }
+
+        </div>
+
+        <!-- resumo da compra -->
+        <div class="right resumo">
+            <h3>Resumo da compra</h3>
+            <p>Produtos ({{ itens.length }}): R$ xxxx</p>
+            <p>Frete: Grátis</p>
+            <hr />
+            <p><strong>Total: R$ xxxx</strong></p>
+            <button mat-raised-button color="success" class="botao-finaliza-compra">Finalizar compra</button>
+            <button mat-stroked-button (click)="continuarComprando()" class="botoes-resumo">Continuar comprando</button>
+        </div>
+
+    </ng-container>
+
+    <!-- carrinho vazio -->
+    <ng-template #carrinhoVazio>
+        <div class="left empty">
+            <mat-card class="empty-card">
+                <mat-icon>shopping_cart_off</mat-icon>
+                <p>Seu carrinho está vazio!</p>
+                <div>
+                    <h3>Adicione produtos e consiga frete grátis</h3>
+                    <a routerLink="/produtos">Conferir produtos</a>
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="right resumo disabled">
+            <h3>Resumo da compra</h3>
+            <p class="placeholder">Aqui, você encontrará os valores da sua compra assim que adicionar produtos.</p>
+        </div>
+    </ng-template>
+</div>
