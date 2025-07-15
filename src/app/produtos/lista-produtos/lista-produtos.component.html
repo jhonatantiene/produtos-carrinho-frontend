@@ -1,8 +1,36 @@
-<mat-toolbar class="cabecalho">
-    <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
-    <mat-menu #cadastro="matMenu">
-        <button mat-menu-item style="text-align: center; color: #07404A;">Novo produto</button>
-    </mat-menu>
-    <button mat-button><mat-icon>shopping_cart</mat-icon>Meu carrinho</button>
+<div class="container">
+    <!-- cabecalho -->
+    <mat-toolbar class="cabecalho">
+        <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
+        <mat-menu #cadastro="matMenu">
+            <button mat-menu-item>Novo produto</button>
+        </mat-menu>
+        <button mat-button><mat-icon>shopping_cart</mat-icon>Meu carrinho</button>
+    </mat-toolbar>
 
-</mat-toolbar>
+    <div class="conteudo">
+
+        <!-- campo de busca -->
+        <div class="busca-container">
+            <input matInput placeholder="Pesquise aqui..." class="campo-busca" />
+            <button mat-icon-button class="botao-busca">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+
+        <!-- filtro -->
+        <div class="filtro-container">
+            <span>Ordenar por: <strong>Menor preço</strong></span>
+        </div>
+
+        <!-- grid de produtos -->
+        <div class="grid-produtos">
+            @for (item of produtos; track $index) {
+            <div class="card-produto">
+                
+            </div>
+            }
+        </div>
+
+    </div>
+</div>
