@@ -20,7 +20,7 @@
             <div class="botoes">
                 <button mat-stroked-button style="color: #07404A;">Cancelar</button>
                 <button mat-flat-button [disabled]="formulario.invalid"
-                    [ngClass]="{'botaoSalvarDesabilitado': formulario.invalid, 'botaoSalvarHabilitado': formulario.valid }">Salvar</button>
+                    [ngClass]="{'botaoSalvarDesabilitado': formulario.invalid, 'botaoSalvarHabilitado': formulario.valid }" (click)="salvar()">Salvar</button>
             </div>
         </form>
     </div>
