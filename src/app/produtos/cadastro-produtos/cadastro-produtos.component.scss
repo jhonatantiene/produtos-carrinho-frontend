@@ -1,9 +1,9 @@
 .container-cadastro {
   display: flex;
   justify-content: center;
-  background-color: #f7f7f7;
   align-items: center;
-  height: 100%;
+  background-color: #f7f7f7;
+  height: 100vh;
   width: 100%;
 }
 
@@ -13,7 +13,7 @@
   padding: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 70%;
-  max-width: 600px;
+  max-width: 800px;
   margin-top: 65px;
 }
 
@@ -41,7 +41,7 @@
   flex: 1;
 }
 
-.upload-imagem {
+.upload-imagem, .botoes {
   margin-bottom: 20px;
 }
 
@@ -50,12 +50,13 @@
   justify-content: space-between;
 }
 
-.botaoSalvarDesabilitado {
-  background: #07404ad3;
-  color: rgba(255, 255, 255, 0.651);
-}
-
+.botaoSalvarDesabilitado,
 .botaoSalvarHabilitado {
   background: #07404A;
   color: white;
+}
+
+.botaoSalvarDesabilitado {
+  background: #07404ad3;
+  color: rgba(255, 255, 255, 0.651);
 }
