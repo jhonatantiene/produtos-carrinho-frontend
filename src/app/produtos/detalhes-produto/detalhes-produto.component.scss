@@ -1,0 +1,102 @@
+.detalhes-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    height: calc(100vh - 80px);
+    padding: 10px;
+}
+
+.galeria {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-principal {
+    width: 70%;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.miniaturas img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+.info-produto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-produto h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.descricao {
+    font-size: 15px;
+    color: #444;
+}
+
+.preco {
+    color: #4314ec;
+    font-size: 35px;
+    margin: 0;
+}
+
+.frete {
+    font-size: 1rem;
+    color: #555;
+}
+
+.frete-gratis {
+    color: #30ce5a;
+    font-weight: bold;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantidade input {
+    width: 70px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.botao-comprar {
+    background-color: #33b154;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .detalhes-container {
+        flex-direction: column;
+    }
+
+}

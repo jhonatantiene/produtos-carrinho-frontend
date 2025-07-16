@@ -1,1 +1,31 @@
-<p>detalhes-produto works!</p>
+<div class="detalhes-container">
+    <!-- coluna da imagem -->
+    <div class="galeria">
+        <img class="imagem-principal" src="1.png" alt="Foto do produto" />
+
+        <div class="miniaturas">
+            <img src="2.png" alt="Miniatura" />
+        </div>
+    </div>
+
+    <!-- coluna de informaçoes -->
+    <div class="info-produto">
+        <h1>produto</h1>
+        <p class="descricao">descricao</p>
+
+        <h2 class="preco">R$ xxxxx</h2>
+        <p class="frete">Frete: <span class="frete-gratis">Grátis</span></p>
+
+        <div class="quantidade">
+            <label>Quantidade:</label>
+            <input type="number" value="1" />
+        </div>
+
+        <button mat-flat-button color="primary" class="botao-comprar">
+            Comprar agora
+        </button>
+        <button mat-stroked-button class="botao-carrinho">
+            Adicionar ao carrinho
+        </button>
+    </div>
+</div>
