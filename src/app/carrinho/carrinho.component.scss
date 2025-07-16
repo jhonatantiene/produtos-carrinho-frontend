@@ -1,64 +1,66 @@
 .container {
-  display: flex;
-  gap: 20px;
-  margin-top: 70px;
-  padding: 20px;
+    display: flex;
+    gap: 20px;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
 }
 
 .container-produtos {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  overflow-y: auto;
-  gap: 20px;
-  padding: 10px;
-  max-height: 800px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow-y: auto;
+    gap: 20px;
+    zoom: 80%;
+    padding: 10px;
+    height: 90%;
 }
 
 .right.resumo {
-  flex: 1;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  min-width: 300px;
-  max-height: 400px;
+    flex: 1;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    zoom: 80%;
+    min-width: 200px;
+    max-height: 400px;
 }
 
 .produto-card {
-  display: flex;
-  background: #f5f5f5;
-  border-radius: 8px;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 8px;
+    align-items: center;
+    gap: 30px;
 }
 
 .produto-card img {
-  padding: 10px;
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
 }
 
 .info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .quantidade {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-  input {
-    width: 50px;
-    text-align: center;
-  }
+    input {
+        width: 50px;
+        text-align: center;
+    }
 }
 
 .botao-excluir {
@@ -66,60 +68,60 @@
 }
 
 .botao-finaliza-compra {
-  width: 100%;
-  margin-top: 20px;
-  background: #33b154;
-  color: white;
+    width: 100%;
+    margin-top: 20px;
+    background: #33b154;
+    color: white;
 }
 
 .botao-continua-compra {
-  width: 100%;
-  margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .empty-card {
-  display: flex;
-  flex: 2;
-  gap: 20px;
-  align-items: center;
-  padding: 1rem;
-  max-height: 800px;
+    display: flex;
+    flex: 2;
+    gap: 20px;
+    align-items: center;
+    padding: 1rem;
+    max-height: 800px;
 }
 
 .empty-card img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
 }
 
 .resumo.disabled {
-  flex: 1;
-  display: flex;
-  opacity: 0.5;
-  pointer-events: none;
+    flex: 1;
+    display: flex;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .placeholder {
-  font-size: 0.85rem;
-  color: #888;
+    font-size: 0.85rem;
+    color: #888;
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+    .container {
+        flex-direction: column;
+    }
 
-  .container-produtos {
-    max-height: 400px;
-  }
+    .container-produtos {
+        max-height: 400px;
+    }
 
-  .produto-card img {
-    width: 100px;
-    height: auto;
-  }
+    .produto-card img {
+        width: 100px;
+        height: auto;
+    }
 
-  .empty-card {
-    flex-direction: column;
-    text-align: center;
-  }
+    .empty-card {
+        flex-direction: column;
+        text-align: center;
+    }
 }
