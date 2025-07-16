@@ -11,11 +11,11 @@ export class ProdutosService {
   constructor(private http: HttpClient) { }
 
   buscarTodos(): Observable<Produto[]> {
-    return this.http.get<Produto[]>('http://localhost:3000/produtos')
+    return this.http.get<Produto[]>('https://produtos-api-production.up.railway.app/produtos')
   }
 
   cadastrar(produto: Produto) {
-    return this.http.post('http://localhost:3000/produtos/cadastrar', produto)
+    return this.http.post('https://produtos-api-production.up.railway.app/produtos/cadastrar', produto)
   }
 }
 
