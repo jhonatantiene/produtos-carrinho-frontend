@@ -1,11 +1,14 @@
-<router-outlet>
-    <!-- cabecalho -->
-    <mat-toolbar class="cabecalho">
-        <button mat-button routerLink="produtos">Produtos</button>
-        <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
-        <mat-menu #cadastro="matMenu">
-            <button mat-menu-item routerLink="/cadastro">Novo produto</button>
-        </mat-menu>
-        <button mat-button routerLink="/carrinho"><mat-icon>shopping_cart</mat-icon>Meu carrinho</button>
-    </mat-toolbar>
-</router-outlet>
+<div [@fadeAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet">
+        <!-- cabecalho -->
+        <mat-toolbar class="cabecalho">
+            <button mat-button routerLink="produtos">Produtos</button>
+            <button mat-button [matMenuTriggerFor]="cadastro">Cadastro</button>
+            <mat-menu #cadastro="matMenu">
+                <button mat-menu-item routerLink="/cadastro">Novo produto</button>
+            </mat-menu>
+            <button mat-button><mat-icon>shopping_cart</mat-icon><a href="/carrinho"
+                    style="color: white; text-decoration: none;">Meu carrinho</a></button>
+        </mat-toolbar>
+    </router-outlet>
+</div>
