@@ -10,13 +10,13 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
 }
 
 .imagem-principal {
-    width: 70%;
+    width: 300px;
 }
 
 .miniaturas {
@@ -97,6 +97,19 @@
 @media (max-width: 768px) {
     .detalhes-container {
         flex-direction: column;
+    }
+
+    .imagem-principal {
+        max-width: 200px;
+    }
+
+    .info-produto h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .preco {
+        font-size: 30px;
     }
 
 }
