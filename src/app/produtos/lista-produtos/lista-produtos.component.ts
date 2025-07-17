@@ -11,6 +11,8 @@ import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-lista-produtos',
   imports: [
@@ -26,6 +28,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
+    RouterLink
   ],
   templateUrl: './lista-produtos.component.html',
   styleUrl: './lista-produtos.component.scss',

@@ -37,7 +37,7 @@
     <!-- grid de produtos -->
     <div class="grid-produtos">
       @for (item of produtosPaginados; track $index) {
-      <div class="card-produto">
+      <div class="card-produto" [routerLink]="['/detalhes', item.id]">
         <img [src]="item.imagem" alt="imagem do produto" loading="lazy" />
         <p class="marca">Apple</p>
         <p class="nome">{{ item.nome }}</p>
