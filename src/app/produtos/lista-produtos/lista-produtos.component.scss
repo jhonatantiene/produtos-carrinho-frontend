@@ -48,6 +48,11 @@
   max-width: 970px;
   margin: auto;
   font-family: sans-serif;
+
+  .select-ordenar {
+    max-width: 100px;
+    text-align: center;
+  }
 }
 
 /*grid dos cards de produtos*/
@@ -118,7 +123,7 @@
 .card-produto .preco {
   font-size: 18px;
   font-weight: bold;
-  color: #f37000;
+  color: #33c720;
   margin-bottom: 2px;
 }
 
@@ -135,9 +140,21 @@
   line-height: 1.4;
 }
 
+mat-paginator {
+  display: flex;
+  justify-content: center !important;
+  padding: 10px;
+}
+
 /*2 colunas para telas menor*/
 @media (max-width: 768px) {
   .grid-produtos {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  mat-paginator {
+    zoom: 80%;
+  }
+
+  
 }

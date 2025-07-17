@@ -2,22 +2,43 @@
   <div class="conteudo">
     <!-- campo de busca -->
     <div class="busca-container">
-      <input matInput placeholder="Pesquise aqui..." class="campo-busca" />
-      <button mat-icon-button class="botao-busca">
+      <input
+        matInput
+        placeholder="Pesquise aqui..."
+        class="campo-busca"
+        [(ngModel)]="pesquisa"
+      />
+      <button mat-icon-button class="botao-busca" (click)="pesquisarProduto()">
         <mat-icon>search</mat-icon>
       </button>
     </div>
 
+    @if(produtosFiltrados.length > 0) {
     <!-- filtro -->
     <div class="filtro-container">
-      <span>Ordenar por: <strong>Menor preço</strong></span>
+      <span><strong>Ordenar por:</strong></span>
+      <mat-select [(value)]="ordernarPor" (selectionChange)="filtrarProdutos()" class="select-ordenar">
+        <mat-option value="nome">Nome</mat-option>
+        <mat-option value="preco">Preço</mat-option>
+      </mat-select>
+
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="alternarDirecao()"
+        aria-label="Alternar direção da ordenação"
+      >
+        <mat-icon>{{
+          direcaoDeOrdenacao === "asc" ? "arrow_upward" : "arrow_downward"
+        }}</mat-icon>
+      </button>
     </div>
 
     <!-- grid de produtos -->
     <div class="grid-produtos">
-      @for (item of produtos; track $index) {
+      @for (item of produtosPaginados; track $index) {
       <div class="card-produto">
-        <img [src]="item.imagem" alt="imagem do produto" />
+        <img [src]="item.imagem" alt="imagem do produto" loading="lazy" />
         <p class="marca">Apple</p>
         <p class="nome">{{ item.nome }}</p>
 
@@ -33,5 +54,15 @@
       </div>
       }
     </div>
+    } @else {
+    <h2 style="text-align: center">Nenhum Produto encontrado.</h2>
+    }
   </div>
+
+  <mat-paginator
+    [length]="produtosFiltrados.length"
+    [pageSize]="itemPorPagina"
+    [pageSizeOptions]="[10, 20, 30]"
+    (page)="mudancaDaPagina($event)"
+  ></mat-paginator>
 </div>
