@@ -8,26 +8,23 @@
         <div class="info">
           <h3>{{ item.nome }}</h3>
           <p>Preço unitário: R$ {{ item.preco }}</p>
-          <p>Subtotal: R$ xxxxxx</p>
+          <p>Subtotal: R$ {{item.preco * item.quantidade}}</p>
 
           <div class="quantidade">
-            <button mat-icon-button>
+            <button mat-icon-button (click)="diminuirQuantidade(item)">
               <mat-icon>remove</mat-icon>
             </button>
 
-            <input value="1" />
+            <input [value]="item.quantidade" />
 
-            <button mat-icon-button>
+            <button mat-icon-button (click)="aumentarQuantidade(item)">
               <mat-icon>add</mat-icon>
             </button>
           </div>
 
-          <button
-            mat-button
-            class="botao-excluir"
-            (click)="removerItem($index)"
-          >
-            <mat-icon>delete</mat-icon>Excluir
+          <button mat-button class="botao-excluir" (click)="remover(item.id)">
+            <mat-icon>delete</mat-icon>
+            Excluir
           </button>
 
           <div class="frete">
@@ -41,18 +38,13 @@
     <!-- resumo da compra -->
     <div class="right resumo">
       <h3>Resumo da compra</h3>
-      <p>Produtos ({{ itens.length }}): R$ xxxx</p>
+      <p><strong>Total: R$ {{total()}}</strong></p>
       <p>Frete: <span style="color: #30ce5a">Grátis</span></p>
       <hr />
-      <p><strong>Total: R$ xxxx</strong></p>
       <button mat-raised-button class="botao-finaliza-compra">
         Finalizar compra
       </button>
-      <button
-        mat-stroked-button
-        (click)="continuarComprando()"
-        class="botao-continua-compra"
-      >
+      <button mat-stroked-button (click)="continuarComprando()" class="botao-continua-compra">
         Continuar comprando
       </button>
     </div>
