@@ -50,15 +50,19 @@ export class CadastroProdutosComponent {
   }
 
   salvar() {
-    console.log(this.formulario.value)
     const produto = this.formulario.value
     this.produtosService.cadastrar(produto).subscribe({
       next: () => {
         console.log('Produto cadastrado com sucesso!')
+        this.formulario.reset()
       },
       error: (err) => {
         console.error('Erro ao cadastrar produto:', err)
       }
     })
+  }
+
+  cancelar() {
+    this.formulario.reset()
   }
 }

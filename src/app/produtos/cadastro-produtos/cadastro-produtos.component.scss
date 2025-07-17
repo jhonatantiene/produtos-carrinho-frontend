@@ -2,9 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
-  background-color: #f7f7f7;
-  height: calc(100vh - 80px);
+  margin-top: 75px;
+  height: calc(100vh - 90px);
   width: 100%;
 }
 
@@ -51,11 +50,11 @@
 
 .botaoSalvarDesabilitado,
 .botaoSalvarHabilitado {
-  background: #07404A;
+  background: rgb(255, 136, 0);
   color: white;
 }
 
 .botaoSalvarDesabilitado {
-  background: #07404ad3;
+  background: rgba(211, 112, 0, 0.644);
   color: rgba(255, 255, 255, 0.651);
 }

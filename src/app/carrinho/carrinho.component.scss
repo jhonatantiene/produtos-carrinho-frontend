@@ -79,32 +79,28 @@
     margin-top: 20px;
 }
 
-.empty-card {
-    display: flex;
-    flex: 2;
-    gap: 20px;
-    align-items: center;
-    padding: 1rem;
-    max-height: 800px;
-}
-
-.empty-card img {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-}
-
-.resumo.disabled {
-    flex: 1;
-    display: flex;
-    opacity: 0.5;
-    pointer-events: none;
-}
 
 .placeholder {
     font-size: 0.85rem;
     color: #888;
 }
+
+.carrinho-vazio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.carrinho-vazio mat-icon {
+    font-size: 48px;
+    padding: 20px;
+    color: #ccc;
+}
+
 
 @media (max-width: 768px) {
     .container {

@@ -37,7 +37,7 @@
 
 .miniaturas img:hover {
     transform: scale(1.1);
-    border-color: #007bff;
+    border-color: rgb(255, 136, 0);
 }
 
 .info-produto {
@@ -46,20 +46,22 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    zoom: 80%;
 }
 
 .info-produto h1 {
     font-size: 30px;
+    color: #2e2e2e;
     margin: 0;
 }
 
 .descricao {
     font-size: 15px;
-    color: #444;
+    color: #555;
 }
 
 .preco {
-    color: #4314ec;
+    color: rgb(255, 136, 0);
     font-size: 35px;
     margin: 0;
 }
@@ -70,8 +72,7 @@
 }
 
 .frete-gratis {
-    color: #30ce5a;
-    font-weight: bold;
+    color: #33b154;
 }
 
 .quantidade {
@@ -110,6 +111,10 @@
 
     .preco {
         font-size: 30px;
+    }
+
+    .miniaturas {
+        display: none;
     }
 
 }

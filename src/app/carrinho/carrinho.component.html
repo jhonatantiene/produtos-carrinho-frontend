@@ -52,23 +52,14 @@
 
   <!-- carrinho vazio -->
   <ng-template #carrinhoVazio>
-    <div class="left empty">
-      <mat-card class="empty-card">
-        <mat-icon>shopping_cart_off</mat-icon>
-        <p>Seu carrinho está vazio!</p>
-        <div>
-          <h3>Adicione produtos e consiga frete grátis</h3>
-          <a routerLink="/produtos">Conferir produtos</a>
-        </div>
-      </mat-card>
-    </div>
-
-    <div class="right resumo disabled">
-      <h3>Resumo da compra</h3>
-      <p class="placeholder">
-        Aqui, você encontrará os valores da sua compra assim que adicionar
-        produtos.
-      </p>
+    <div class="carrinho-vazio">
+      <mat-icon>shopping_cart_off</mat-icon>
+      <h3>Seu carrinho está vazio</h3>
+      <p>Adicione produtos para aproveitar frete grátis!</p>
+      <a routerLink="/produtos" mat-stroked-button>
+        Ver produtos
+      </a>
     </div>
   </ng-template>
+
 </div>

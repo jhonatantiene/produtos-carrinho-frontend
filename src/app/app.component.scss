@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: #07404A;
+    background: rgb(255, 157, 45);
+    box-shadow: 0px 3px 3px 0px rgba(185, 99, 0, 0.801);
     display: flex;
     justify-content: center;
     gap: 200px;
@@ -19,5 +20,6 @@
     @media (max-width: 600px) {
         gap: 0px;
         justify-content: space-around;
+        zoom: 90%;
     }
 }
