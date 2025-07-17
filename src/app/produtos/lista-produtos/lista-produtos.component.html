@@ -1,26 +1,37 @@
 <div class="container">
-    <div class="conteudo">
-
-        <!-- campo de busca -->
-        <div class="busca-container">
-            <input matInput placeholder="Pesquise aqui..." class="campo-busca" />
-            <button mat-icon-button class="botao-busca">
-                <mat-icon>search</mat-icon>
-            </button>
-        </div>
-
-        <!-- filtro -->
-        <div class="filtro-container">
-            <span>Ordenar por: <strong>Menor preço</strong></span>
-        </div>
-
-        <!-- grid de produtos -->
-        <div class="grid-produtos">
-            @for (item of produtos; track $index) {
-            <div class="card-produto">
-
-            </div>
-            }
-        </div>
+  <div class="conteudo">
+    <!-- campo de busca -->
+    <div class="busca-container">
+      <input matInput placeholder="Pesquise aqui..." class="campo-busca" />
+      <button mat-icon-button class="botao-busca">
+        <mat-icon>search</mat-icon>
+      </button>
     </div>
+
+    <!-- filtro -->
+    <div class="filtro-container">
+      <span>Ordenar por: <strong>Menor preço</strong></span>
+    </div>
+
+    <!-- grid de produtos -->
+    <div class="grid-produtos">
+      @for (item of produtos; track $index) {
+      <div class="card-produto">
+        <img [src]="item.imagem" alt="imagem do produto" />
+        <p class="marca">Apple</p>
+        <p class="nome">{{ item.nome }}</p>
+
+        <p class="preco-label">A partir de</p>
+        <p class="preco">R$ {{ item.preco }}</p>
+        <p class="pix">no pix</p>
+
+        <p class="parcelado">
+          Ou <strong>R$ {{ item.preco }}</strong> em até <br />
+          <strong>10x de R$ {{ item.preco / 10 }}</strong>
+          s/ juros
+        </p>
+      </div>
+      }
+    </div>
+  </div>
 </div>
