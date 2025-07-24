@@ -1,10 +1,10 @@
 <div class="detalhes-container">
     <!-- coluna da imagem -->
     <div class="galeria">
-        <img class="imagem-principal" [src]="produto?.imagem" alt="Foto do produto" />
+        <img class="imagem-principal" [src]="caminhoDaImg + '/imagem/' + produto?.imagem" alt="Foto do produto" />
 
         <div class="miniaturas">
-            <img [src]="produto?.imagem" alt="Miniatura" />
+            <img [src]="caminhoDaImg + '/imagem/' + produto?.imagem" alt="Miniatura" />
         </div>
     </div>
 

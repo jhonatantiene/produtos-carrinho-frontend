@@ -7,6 +7,7 @@ import { ProdutosService } from '../../servicos/produtos.service';
 import { Produto } from '../../interfaces/interfaceProdutos';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-detalhes-produto',
@@ -18,6 +19,7 @@ export class DetalhesProdutoComponent implements OnInit {
 
   produto: Produto | null = null
   erro: string = ''
+  caminhoDaImg = environment.apiUrl
 
   constructor(
     private route: ActivatedRoute,

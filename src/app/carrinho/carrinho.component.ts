@@ -10,6 +10,7 @@ import { Produto } from '../interfaces/interfaceProdutos';
 import { CarrinhoService } from '../servicos/carrinho.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-carrinho',
@@ -33,6 +34,7 @@ export class CarrinhoComponent implements OnInit, OnDestroy {
 
   itens: Produto[] = [];
   routerSubscription!: Subscription;
+  caminhoDaImg = environment.apiUrl
 
   ngOnInit(): void {
     this.atualizarCarrinho()

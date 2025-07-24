@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterLink } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -36,13 +37,14 @@ import { RouterLink } from '@angular/router';
 export class ListaProdutosComponent implements OnInit {
   constructor(private produtosService: ProdutosService) {}
 
-  produtos: Produto[] = [];
-  produtosFiltrados: Produto[] = [];
-  itemPorPagina = 10;
-  pageIndex = 0;
-  pesquisa: string = '';
-  ordernarPor: string = 'nome';
-  direcaoDeOrdenacao: 'asc' | 'desc' = 'asc';
+  produtos: Produto[] = []
+  produtosFiltrados: Produto[] = []
+  itemPorPagina = 10
+  pageIndex = 0
+  pesquisa: string = ''
+  ordernarPor: string = 'nome'
+  direcaoDeOrdenacao: 'asc' | 'desc' = 'asc'
+  caminhoDaImg = environment.apiUrl
 
   get produtosPaginados() {
     const start = this.pageIndex * this.itemPorPagina;
@@ -57,6 +59,7 @@ export class ListaProdutosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarProdutos();
+    console.log(this.caminhoDaImg)
   }
 
   listarProdutos() {

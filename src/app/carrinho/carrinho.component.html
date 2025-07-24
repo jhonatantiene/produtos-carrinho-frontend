@@ -4,7 +4,7 @@
     <div class="container-produtos">
       @for (item of itens; track $index) {
       <div class="produto-card">
-        <img [src]="item.imagem" />
+        <img [src]="caminhoDaImg + '/imagem/' + item.imagem" />
         <div class="info">
           <h3>{{ item.nome }}</h3>
           <p>Preço unitário: R$ {{ item.preco }}</p>

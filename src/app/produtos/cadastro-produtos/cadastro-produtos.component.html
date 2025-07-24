@@ -15,10 +15,13 @@
             <div class="upload-imagem">
                 <label for="imagem">Imagem do Produto:</label>
                 <input type="file" id="imagem" (change)="selecionarImagem($event)" />
+                @if(imagemPreview) {
+                <img [src]="imagemPreview" alt="Previa da img" width="10%" height="10%">
+                }
             </div>
 
             <div class="botoes">
-                <button mat-stroked-button style="color: rgba(211, 112, 0, 0.884);">Cancelar</button>
+                <button mat-stroked-button style="color: rgba(211, 112, 0, 0.884);" (click)="cancelar()">Cancelar</button>
                 <button mat-flat-button [disabled]="formulario.invalid"
                     [ngClass]="{'botaoSalvarDesabilitado': formulario.invalid, 'botaoSalvarHabilitado': formulario.valid }" (click)="salvar()">Salvar</button>
             </div>
